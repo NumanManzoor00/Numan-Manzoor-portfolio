@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noman Manzoor Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="profile image.png">
+</head>
+<body>
+    <!-- Three.js Background Canvas -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-glow" id="custom-cursor-glow"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-text">Noman Manzoor</span><span class="logo-dot"> Portfolio</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#hero" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#resume-checker">AI Assistant</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#chatbot-section">Chatbot</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="section hero-section">
+            <div class="grid grid-2 align-center hero-grid">
+                <!-- Left Column: Content -->
+                <div class="hero-content">
+                    <div class="badge hero-badge"><i class="fas fa-magic"></i> Immersive Portfolio Experience</div>
+                    <h1 class="hero-title">
+                        Welcome to my <br>
+                        <span class="gradient-text text-glow">Portfolio Experience</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        I am a passionate <br>
+                        <span class="typing-text" id="typing-text"></span>
+                    </p>
+                    <p class="hero-desc">
+                        Focused on building intelligent systems and modern web applications that solve real-world problems. Explore my interactive 3D world where creativity meets technology.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary hover-glow">
+                            <span>Explore My Work</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#resume-checker" class="btn btn-secondary hover-glow">
+                            <span>Try AI Assistant</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Animated Hologram Visuals -->
+                <div class="hero-visual-container">
+                    <div class="hologram-card">
+                        <div class="hologram-ring ring-1"></div>
+                        <div class="hologram-ring ring-2"></div>
+                        <div class="hologram-ring ring-3"></div>
+                        <div class="hologram-core">
+                            <i class="fas fa-robot hologram-icon"></i>
+                        </div>
+                        
+                        <!-- Floating Badges -->
+                        <div class="floating-tech-badge tech-badge-1">
+                            <i class="fas fa-brain text-cyan"></i>
+                            <span>AI Automation</span>
+                        </div>
+                        <div class="floating-tech-badge tech-badge-2">
+                            <i class="fas fa-code text-purple"></i>
+                            <span>Full-Stack</span>
+                        </div>
+                        <div class="floating-tech-badge tech-badge-3">
+                            <i class="fas fa-cubes text-pink"></i>
+                            <span>Interactive UI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-down">
+                <span>Scroll to Explore</span>
+                <div class="mouse-icon">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section about-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-tag">01. PROFILE</span>
+                <h2>About Me</h2>
+                <div class="line"></div>
+            </div>
+            <div class="grid grid-2">
+                <div class="glass-card about-card">
+                    <h3>Turning Ideas into Scalable Digital Products</h3>
+                    <p class="paragraph">
+                        Hi, I’m Noman, a developer who enjoys turning ideas into scalable digital products. I love creating systems that are not just functional but also visually engaging and smart.
+                    </p>
+                    <p class="paragraph">
+                        My philosophy focuses on bridging the gap between artificial intelligence workflows and state-of-the-art web interfaces to create seamless, automated, and intelligent user experiences.
+                    </p>
+                </div>
+                <div class="glass-card expertise-card">
+                    <h3>My Core Expertise</h3>
+                    <ul class="expertise-list">
+                        <li>
+                            <div class="exp-icon"><i class="fas fa-robot"></i></div>
+                            <div>
+                                <strong>AI Automation & Workflows</strong>
+                                <p>Building intelligent agents and custom prompt systems.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exp-icon"><i class="fas fa-laptop-code"></i></div>
+                            <div>
+                                <strong>Full Stack Development</strong>
+                                <p>Creating robust architectures (Frontend + Backend).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exp-icon"><i class="fas fa-network-wired"></i></div>
+                            <div>
+                                <strong>API Integration & Design</strong>
+                                <p>Designing scalable microservices and integrations.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exp-icon"><i class="fas fa-paint-brush"></i></div>
+                            <div>
+                                <strong>Interactive & Smart Apps</strong>
+                                <p>Combining functional design with visual perfection.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume / AI Career Assistant Section -->
+        <section id="resume-checker" class="section resume-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-tag">02. CO-PILOT</span>
+                <h2>AI Career Assistant</h2>
+                <div class="line"></div>
+            </div>
+            <div class="glass-card resume-card">
+                <div class="resume-intro">
+                    <h3>Smart Resume Checker</h3>
+                    <p>Upload your own resume or load Noman's pre-loaded resume and let the AI analyze skills, experience, and career compatibility.</p>
+                </div>
+                
+                <div class="resume-workspace">
+                    <!-- Control panel -->
+                    <div class="resume-controls">
+                        <div class="upload-area" id="drop-zone">
+                            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                            <p class="upload-text">Drag & drop your resume here, or <span>browse</span></p>
+                            <p class="upload-hint">Supports .txt files (or copy/paste content below)</p>
+                            <input type="file" id="resume-upload" accept=".txt" style="display: none;">
+                        </div>
+                        <div class="textarea-container">
+                            <textarea id="resume-text" placeholder="Or paste your resume text here to analyze..."></textarea>
+                        </div>
+                        <div class="resume-actions">
+                            <button id="btn-load-noman" class="btn btn-secondary">
+                                <i class="fas fa-user-tie"></i> Load Noman's Resume
+                            </button>
+                            <button id="btn-analyze" class="btn btn-primary hover-glow">
+                                <i class="fas fa-brain animate-pulse"></i> Analyze Resume
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Analysis Dashboard (Hidden by default, shown after analysis) -->
+                    <div class="resume-dashboard hidden" id="analysis-dashboard">
+                        <div class="scanner-container" id="scanner-line">
+                            <div class="scanner"></div>
+                        </div>
+
+                        <div class="analysis-results">
+                            <div class="dashboard-header">
+                                <h4>AI Analysis Report</h4>
+                                <span class="badge" id="resume-status">Complete</span>
+                            </div>
+
+                            <div class="grid grid-3 dashboard-grid">
+                                <!-- Role Compatibility Rings -->
+                                <div class="dashboard-card card-fit-analysis">
+                                    <h5>Role Fit Analysis</h5>
+                                    <div class="fit-score-wrapper">
+                                        <div class="circular-progress" id="fit-ai-engineer" data-role="AI Automation Engineer">
+                                            <svg class="progress-ring" width="100" height="100">
+                                                <circle class="progress-ring__circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="transparent" r="42" cx="50" cy="50"/>
+                                                <circle class="progress-ring__circle progress-ring__circle-cyan" stroke-width="8" fill="transparent" r="42" cx="50" cy="50"/>
+                                            </svg>
+                                            <div class="progress-value">0%</div>
+                                        </div>
+                                        <span>AI Automation Engineer</span>
+                                    </div>
+                                    <div class="fit-score-wrapper">
+                                        <div class="circular-progress" id="fit-fullstack" data-role="Full Stack Developer">
+                                            <svg class="progress-ring" width="100" height="100">
+                                                <circle class="progress-ring__circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="transparent" r="42" cx="50" cy="50"/>
+                                                <circle class="progress-ring__circle progress-ring__circle-purple" stroke-width="8" fill="transparent" r="42" cx="50" cy="50"/>
+                                            </svg>
+                                            <div class="progress-value">0%</div>
+                                        </div>
+                                        <span>Full Stack Developer</span>
+                                    </div>
+                                </div>
+
+                                <!-- Skill bars -->
+                                <div class="dashboard-card card-skill-evaluation">
+                                    <h5>Technical Skill Evaluation</h5>
+                                    <div class="skill-bar-wrapper">
+                                        <div class="skill-info">
+                                            <span>Frontend & Styling</span>
+                                            <span class="skill-score-val" id="score-frontend">0%</span>
+                                        </div>
+                                        <div class="skill-progress-bg">
+                                            <div class="skill-progress-bar bg-cyan" id="bar-frontend"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar-wrapper">
+                                        <div class="skill-info">
+                                            <span>Backend & APIs</span>
+                                            <span class="skill-score-val" id="score-backend">0%</span>
+                                        </div>
+                                        <div class="skill-progress-bg">
+                                            <div class="skill-progress-bar bg-purple" id="bar-backend"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar-wrapper">
+                                        <div class="skill-info">
+                                            <span>AI Automation & Prompting</span>
+                                            <span class="skill-score-val" id="score-ai">0%</span>
+                                        </div>
+                                        <div class="skill-progress-bg">
+                                            <div class="skill-progress-bar bg-pink" id="bar-ai"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Suggested paths -->
+                                <div class="dashboard-card card-suggestions">
+                                    <h5>Career & Development Advice</h5>
+                                    <ul class="suggestion-list" id="suggestion-list">
+                                        <li>Analyzing resume data...</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="project-breakdown-section">
+                                <h5>Project Experience Breakdown & Keywords</h5>
+                                <div class="keywords-tags" id="resume-keywords">
+                                    <!-- Dynamic tags -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-tag">03. EXPERTISE</span>
+                <h2>Skills</h2>
+                <div class="line"></div>
+            </div>
+            <div class="grid grid-3">
+                <!-- Skill Group 1 -->
+                <div class="glass-card skill-group-card tilt-card">
+                    <div class="skill-group-header">
+                        <i class="fas fa-brain group-icon text-cyan"></i>
+                        <h3>AI Automation</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <span>Workflows (n8n, Make)</span>
+                            <div class="bullet-bar"><div class="fill-bar" style="width: 92%;"></div></div>
+                        </li>
+                        <li>
+                            <span>AI Agents & LangChain</span>
+                            <div class="bullet-bar"><div class="fill-bar" style="width: 88%;"></div></div>
+                        </li>
+                        <li>
+                            <span>Prompt Systems & LLMs</span>
+                            <div class="bullet-bar"><div class="fill-bar" style="width: 95%;"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Skill Group 2 -->
+                <div class="glass-card skill-group-card tilt-card">
+                    <div class="skill-group-header">
+                        <i class="fas fa-code group-icon text-purple"></i>
+                        <h3>Full Stack</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <span>React, HTML5, CSS3</span>
+                            <div class="bullet-bar"><div class="fill-bar" style="width: 90%;"></div></div>
+                        </li>
+                        <li>
+                            <span>Node.js & Python</span>
+                            <div class="bullet-bar"><div class="fill-bar" style="width: 85%;"></div></div>
+                        </li>
+                        <li>
+                            <span>Database (SQL / NoSQL)</span>
+                            <div class="bullet-bar"><div class="fill-bar" style="width: 82%;"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Skill Group 3 -->
+                <div class="glass-card skill-group-card tilt-card">
+                    <div class="skill-group-header">
+                        <i class="fas fa-project-diagram group-icon text-pink"></i>
+                        <h3>Architecture & Design</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li>
+                            <span>API Dev & Integration</span>
+                            <div class="bullet-bar"><div class="fill-bar" style="width: 88%;"></div></div>
+                        </li>
+                        <li>
+                            <span>UI/UX Design</span>
+                            <div class="bullet-bar"><div class="fill-bar" style="width: 86%;"></div></div>
+                        </li>
+                        <li>
+                            <span>System Architecture</span>
+                            <div class="bullet-bar"><div class="fill-bar" style="width: 80%;"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-tag">04. PORTFOLIO</span>
+                <h2>Projects</h2>
+                <div class="line"></div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="automation">AI & Workflows</button>
+                <button class="filter-btn" data-filter="web">Web Applications</button>
+            </div>
+
+            <div class="grid grid-3 projects-grid">
+                <!-- Group 1: AI & Workflows (6 Projects) -->
+                <!-- Project 1: WhatsApp, Instagram & Facebook Message Automation -->
+                <div class="glass-card project-card tilt-card" data-category="automation">
+                    <div class="project-image-container">
+                        <img src="Meta Message Automation.jpg" alt="Meta Channels Automation" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fab fa-meta"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">AI & Workflows</span>
+                        <h3>Meta Message Automation</h3>
+                        <p>Omnichannel chatbot connecting WhatsApp, Instagram, and Facebook Messenger to automate client inquiries using n8n and OpenAI.</p>
+                        <div class="project-tags">
+                            <span>n8n</span>
+                            <span>OpenAI API</span>
+                            <span>Meta Graph API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Website Chatbot Automation -->
+                <div class="glass-card project-card tilt-card" data-category="automation">
+                    <div class="project-image-container">
+                        <img src="Website Chatbot.png" alt="Website Chatbot Automation" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">AI & Workflows</span>
+                        <h3>Website Chatbot Assistant</h3>
+                        <p>An intelligent self-hosted assistant widget with RAG capabilities to resolve visitor queries using vector store datasets.</p>
+                        <div class="project-tags">
+                            <span>Vector DB</span>
+                            <span>n8n</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Email Handling Chatbot -->
+                <div class="glass-card project-card tilt-card" data-category="automation">
+                    <div class="project-image-container">
+                        <img src="Smart Email Classifier 2.png" alt="Email Handling Assistant" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">AI & Workflows</span>
+                        <h3>Smart Email Classifier</h3>
+                        <p>Intelligent incoming email parsing workflow that scans client requests, extracts details, auto-drafts replies, and logs issues.</p>
+                        <div class="project-tags">
+                            <span>n8n</span>
+                            <span>IMAP/SMTP</span>
+                            <span>LLM Agents</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Automated Social Media Content Generator -->
+                <div class="glass-card project-card tilt-card" data-category="automation">
+                    <div class="project-image-container">
+                        <img src="Content Generation Flow.png" alt="Content Scheduler" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">AI & Workflows</span>
+                        <h3>Content Generation Flow</h3>
+                        <p>A scheduling workflow that monitors visual trends, drafts blog copies, produces images with DALL-E, and posts updates automatically.</p>
+                        <div class="project-tags">
+                            <span>n8n</span>
+                            <span>DALL-E 3</span>
+                            <span>Social APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: AI Customer Support Routing Agent -->
+                <div class="glass-card project-card tilt-card" data-category="automation">
+                    <div class="project-image-container">
+                        <img src="Support Ticket Router.jpg" alt="Customer Support Router" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">AI & Workflows</span>
+                        <h3>Support Ticket Router</h3>
+                        <p>Sentiment-analysis routing system analyzing client requests to assign, tag, and forward tickets to slack departments.</p>
+                        <div class="project-tags">
+                            <span>n8n</span>
+                            <span>Slack API</span>
+                            <span>Sentiment Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Automatic Invoice Parsing & Sync -->
+                <div class="glass-card project-card tilt-card" data-category="automation">
+                    <div class="project-image-container">
+                        <img src="Automatic Invoice Parser.webp" alt="Invoice PDF Scanner" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">AI & Workflows</span>
+                        <h3>Automatic Invoice Parser</h3>
+                        <p>OCR-driven invoice extraction workflow that reads PDF receipts, matches balances, and pushes to accounting databases.</p>
+                        <div class="project-tags">
+                            <span>n8n</span>
+                            <span>Tesseract OCR</span>
+                            <span>Google Sheets API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 2: Web Applications (6 Projects) -->
+                <!-- Project 7: E-commerce Website -->
+                <div class="glass-card project-card tilt-card" data-category="web">
+                    <div class="project-image-container">
+                        <img src="E-Commerce Storefront.jpg" alt="E-commerce storefront" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Applications</span>
+                        <h3>E-Commerce Storefront</h3>
+                        <p>Storefront platform featuring product grids, stripe checkout gateway, user shopping carts, and administrative inventories.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Stripe SDK</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Insurance Portal -->
+                <div class="glass-card project-card tilt-card" data-category="web">
+                    <div class="project-image-container">
+                        <img src="SureGuard Insurance Portal.png" alt="Insurance policy portal" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Applications</span>
+                        <h3>SureGuard Insurance Portal</h3>
+                        <p>Secure client portal for submitting policy claims, comparing rates, uploading files, and tracking claims processing status.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Express</span>
+                            <span>PostgreSQL</span>
+                            <span>Multer API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: Hotel booking system -->
+                <div class="glass-card project-card tilt-card" data-category="web">
+                    <div class="project-image-container">
+                        <img src="LuxeReserve Hotel Portal.jpg" alt="Hotel Reservation" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Applications</span>
+                        <h3>LuxeReserve Hotel Portal</h3>
+                        <p>Hotel booking engine including room scheduling grids, live calendar availability, stripe bills, and client feedback reviews.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>MySQL</span>
+                            <span>Sequelize</span>
+                            <span>Flatpickr</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10: Property dealing platform -->
+                <div class="glass-card project-card tilt-card" data-category="web">
+                    <div class="project-image-container">
+                        <img src="Haven Real Estate Portal.png" alt="Real Estate searches" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-home"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Applications</span>
+                        <h3>Haven Real Estate Portal</h3>
+                        <p>Interactive real estate platform displaying property searches, leaflet map listings, and direct real-estate agent contacts.</p>
+                        <div class="project-tags">
+                            <span>LeafletJS</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11: SaaS Analytics Dashboard -->
+                <div class="glass-card project-card tilt-card" data-category="web">
+                    <div class="project-image-container">
+                        <img src="SaaS Analytics Dashboard.png" alt="SaaS Metrics telemetry" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Applications</span>
+                        <h3>SaaS Analytics Dashboard</h3>
+                        <p>Visual workspace displaying telemetry, user counts, system logs, subscription metrics, and analytics using Chart.js.</p>
+                        <div class="project-tags">
+                            <span>Chart.js</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>WebSockets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12: Collaborative Team Workspace -->
+                <div class="glass-card project-card tilt-card" data-category="web">
+                    <div class="project-image-container">
+                        <img src="Synapse Team Workspace.png" alt="Kanban project board" class="project-card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Applications</span>
+                        <img src="S" alt="">
+                        <h3>Synapse Team Workspace</h3>
+                        <p>Kanban project manager featuring interactive task cards, socket communication rooms, and project calendars.</p>
+                        <div class="project-tags">
+                            <span>Socket.io</span>
+                            <span>React</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Section (Embedded View) -->
+        <section id="chatbot-section" class="section chatbot-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-tag">05. VIRTUAL AGENT</span>
+                <h2>Meet Alex – My AI Assistant</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="grid grid-2 align-center">
+                <div class="glass-card chatbot-info-card">
+                    <h3>Alex – My AI Assistant</h3>
+                    <p class="paragraph">
+                        Alex is my personal portfolio chatbot designed to help visitors learn more about me. It responds with smart, simple, and helpful answers about my professional profile, skills, and background.
+                    </p>
+                    <p class="paragraph">Try asking Alex questions like:</p>
+                    <div class="preset-questions-grid">
+                        <button class="preset-btn" data-query="Ask Alex about Noman’s skills">
+                            “Ask Alex about Noman’s skills”
+                        </button>
+                        <button class="preset-btn" data-query="Ask Alex about his projects">
+                            “Ask Alex about his projects”
+                        </button>
+                        <button class="preset-btn" data-query="Ask Alex what technologies he uses">
+                            “Ask Alex what technologies he uses”
+                        </button>
+                        <button class="preset-btn" data-query="Can I have contact info?">
+                            “How can I contact Noman?”
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chatbot Widget Structure (Embedded inside the page) -->
+                <div class="glass-card chat-box-container">
+                    <div class="chat-header">
+                        <div class="chat-avatar">
+                            <i class="fas fa-user-astronaut"></i>
+                            <span class="chat-status-indicator"></span>
+                        </div>
+                        <div class="chat-title-info">
+                            <h4>Alex</h4>
+                            <span>AI Assistant (Active)</span>
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chat-messages-embedded">
+                        <div class="chat-bubble bot-bubble">
+                            <p>Hi, I'm Alex! I can help you learn more about Noman's work, experience, and development expertise. What would you like to know?</p>
+                            <span class="chat-time">10:50 AM</span>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" class="chat-input" id="chat-input-embedded" placeholder="Ask Alex something...">
+                        <button class="chat-send-btn" id="chat-send-embedded"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section scroll-reveal">
+            <div class="section-header">
+                <span class="section-tag">06. CONNECT</span>
+                <h2>Contact</h2>
+                <div class="line"></div>
+            </div>
+            <div class="grid grid-2">
+                <div class="glass-card contact-info-card">
+                    <h3>Let’s connect and build something amazing together.</h3>
+                    <p class="paragraph">
+                        Whether you are looking to automate your workflows, build a modern full stack application, or create an engaging interactive web interface, my inbox is always open.
+                    </p>
+                    <div class="social-channels">
+                        <a href="mailto:numanmanzoor500@gmail.com" class="social-link">
+                            <div class="channel-icon bg-red"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span>Send Email</span>
+                                <strong>Gmail</strong>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/noman-manzoor" target="_blank" class="social-link">
+                            <div class="channel-icon bg-blue"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <span>Connect</span>
+                                <strong>LinkedIn</strong>
+                            </div>
+                        </a>
+                        <a href="https://github.com/NumanManzoor00" target="_blank" class="social-link">
+                            <div class="channel-icon bg-gray"><i class="fab fa-github"></i></div>
+                            <div>
+                                <span>View Code</span>
+                                <strong>GitHub</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Simple Contact Form mockup -->
+                <div class="glass-card contact-form-card">
+                    <h3>Send a Direct Message</h3>
+                    <form id="contact-form" onsubmit="event.preventDefault(); alert('Message sent! Noman will get back to you shortly.'); this.reset();">
+                        <div class="form-group">
+                            <label for="form-name">Name</label>
+                            <input type="text" id="form-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email</label>
+                            <input type="email" id="form-email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" rows="4" placeholder="Hi Noman, I have an automation project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary hover-glow full-width">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Floating Chatbot Widget (Always available at the bottom-right corner) -->
+    <div class="floating-chat-widget" id="floating-chat-widget">
+        <button class="chat-toggle-bubble" id="chat-toggle-bubble" aria-label="Open AI Assistant">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge animate-pulse">1</span>
+        </button>
+        
+        <div class="glass-card floating-chat-window hidden" id="floating-chat-window">
+            <div class="chat-header">
+                <div class="chat-avatar">
+                    <i class="fas fa-user-astronaut"></i>
+                    <span class="chat-status-indicator"></span>
+                </div>
+                <div class="chat-title-info">
+                    <h4>Alex</h4>
+                    <span>AI Assistant</span>
+                </div>
+                <button class="chat-close-btn" id="chat-close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chat-messages-floating">
+                <div class="chat-bubble bot-bubble">
+                    <p>Hello! I'm Alex. How can I help you explore Noman's profile today?</p>
+                    <span class="chat-time">10:50 AM</span>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" class="chat-input" id="chat-input-floating" placeholder="Ask Alex...">
+                <button class="chat-send-btn" id="chat-send-floating"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Noman Manzoor Portfolio. Built with creativity, AI, and modern web technologies.</p>
+    </footer>
+
+    <!-- Three.js (via CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="chatbot.js"></script>
+    <script src="resume.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
